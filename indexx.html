@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita.Viral - Keren! Anak 13 Tahun Jago Free Fire Dilirik Internasional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset dan Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, #d32f2f, #f44336);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 32px;
+        }
+        
+        .logo span {
+            color: #ffeb3b;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 17px;
+            transition: all 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #ffeb3b;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        
+        /* Main Content Styles */
+        .main-content {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        /* Artikel Styles */
+        .article {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .article-header {
+            padding: 25px 30px 10px;
+        }
+        
+        .article-category {
+            display: inline-block;
+            background-color: #f44336;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .article-title {
+            font-size: 32px;
+            color: #222;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .article-meta {
+            display: flex;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        
+        .article-meta span {
+            margin-right: 20px;
+        }
+        
+        .article-meta i {
+            margin-right: 5px;
+            color: #f44336;
+        }
+        
+        .article-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        .article-body {
+            padding: 30px;
+        }
+        
+        .article-body p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .highlight-box {
+            background-color: #fff9e6;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight-box h3 {
+            color: #e65100;
+            margin-bottom: 10px;
+        }
+        
+        .profile-section {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 25px;
+            border: 5px solid #f44336;
+        }
+        
+        .profile-info h3 {
+            color: #d32f2f;
+            margin-bottom: 10px;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            background-color: #f44336;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 10px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: #d32f2f;
+            transform: translateY(-3px);
+        }
+        
+        .social-links i {
+            margin-right: 8px;
+        }
+        
+        /* Sidebar Styles */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        /* Iklan Styles */
+        .advertisement {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .ad-header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .ad-header i {
+            font-size: 18px;
+        }
+        
+        .ad-content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .ad-deepseek {
+            background: linear-gradient(to right, #673ab7, #3f51b5);
+            color: white;
+            padding: 25px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .ad-deepseek h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .ad-deepseek h3 i {
+            margin-right: 10px;
+            font-size: 26px;
+        }
+        
+        .ad-deepseek p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .ad-deepseek .btn {
+            background-color: white;
+            color: #673ab7;
+            padding: 10px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .ad-deepseek .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .ad-banner {
+            width: 100%;
+            height: 250px;
+            background-color: #f1f8ff;
+            border: 2px dashed #2196f3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #2196f3;
+            font-weight: 600;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        
+        .ad-banner i {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        /* Berita Terkait Styles */
+        .related-news {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .related-header {
+            background-color: #2196f3;
+            color: white;
+            padding: 15px 20px;
+            font-weight: 600;
+        }
+        
+        .related-list {
+            padding: 20px;
+        }
+        
+        .related-item {
+            display: flex;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .related-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .related-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+        
+        .related-item h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        .related-item p {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #222;
+            color: #ddd;
+            padding: 40px 0 20px;
+            margin-top: 40px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .footer-section p {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #f44336;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #444;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: #f44336;
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .article-image {
+                height: 350px;
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav {
+                width: 100%;
+                margin-top: 15px;
+                display: none;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0 0 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .article-title {
+                font-size: 26px;
+            }
+            
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-img {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .article-image {
+                height: 250px;
+            }
+            
+            .article-title {
+                font-size: 22px;
+            }
+            
+            .ad-deepseek h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-fire"></i>
+                berita.<span>viral</span>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Beranda</a></li>
+                    <li><a href="#"><i class="fas fa-gamepad"></i> Gaming</a></li>
+                    <li><a href="#"><i class="fas fa-video"></i> Hiburan</a></li>
+                    <li><a href="#"><i class="fas fa-newspaper"></i> Teknologi</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle"></i> Tentang</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content">
+            <!-- Artikel Utama -->
+            <article class="article">
+                <div class="article-header">
+                    <span class="article-category">GAMING</span>
+                    <h1 class="article-title">Keren! Anak 13 Tahun Asal Cisarua Bogor Jago Free Fire, Dilirik Nasional Maupun Internasional</h1>
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar-alt"></i> 28 Maret 2024</span>
+                        <span><i class="far fa-clock"></i> 5 menit baca</span>
+                        <span><i class="far fa-eye"></i> 12.5k dilihat</span>
+                    </div>
+                </div>
+                
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Akbar Maulana Ibrahim bermain Free Fire" class="article-image">
+                
+                <div class="article-body">
+                    <p>Seorang anak berusia 13 tahun asal Cisarua, Bogor, Jawa Barat menjadi sorotan karena kemampuannya yang luar biasa dalam bermain game Free Fire. Akbar Maulana Ibrahim, itulah nama bocah yang kini sedang dilirik oleh tim nasional maupun internasional karena skill bermain game battle royale tersebut.</p>
+                    
+                    <div class="highlight-box">
+                        <h3><i class="fas fa-star"></i> Fakta Menarik:</h3>
+                        <p>Akbar telah bermain Free Fire sejak usia 8 tahun (kelas 2 SD) pada masa pandemi tahun 2019. Menariknya, sejak awal bermain, Akbar sudah menunjukkan bakat dan keahlian yang luar biasa dalam game tersebut.</p>
+                    </div>
+                    
+                    <p>Kemampuan Akbar dalam mengontrol karakter, akurasi tembakan, serta strategi bertahan hidup di arena pertempuran Free Fire membuat banyak orang terkesima. Tidak heran jika kabarnya beberapa tim esports nasional dan internasional mulai melirik bakat muda ini.</p>
+                    
+                    <div class="profile-section">
+                        <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Akbar Maulana Ibrahim" class="profile-img">
+                        <div class="profile-info">
+                            <h3>Profil Akbar Maulana Ibrahim</h3>
+                            <p><strong>Usia:</strong> 13 tahun</p>
+                            <p><strong>Asal:</strong> Cisarua, Bogor, Jawa Barat</p>
+                            <p><strong>Game:</strong> Free Fire</p>
+                            <p><strong>Username/ID:</strong> Dmxz • Axe</p>
+                            <p><strong>Pengalaman Bermain:</strong> 5 tahun (sejak usia 8 tahun)</p>
+                            
+                            <div class="social-links">
+                                <a href="https://www.tiktok.com/@dmxzaxe?_r=1&_t=ZS-93juCO058fX" target="_blank">
+                                    <i class="fab fa-tiktok"></i> TikTok Akbar
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-youtube"></i> YouTube Highlights
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p>Menurut informasi yang beredar, Akbar biasa bermain Free Fire selama 2-3 jam per hari setelah menyelesaikan tugas sekolah. Orang tua Akbar pun mendukung hobinya asalkan tidak mengganggu prestasi akademiknya di sekolah.</p>
+                    
+                    <p>"Kami awalnya khawatir dengan hobi bermain game Akbar, tapi melihat dia bisa membagi waktu dengan baik dan bahkan punya prestasi di game tersebut, kami akhirnya mendukung asalkan tetap bertanggung jawab dengan kewajiban sekolah," ujar ibu Akbar dalam salah satu wawancara.</p>
+                    
+                    <p>Bagi yang ingin melihat langsung aksi Akbar bermain Free Fire, bisa mengunjungi akun TikToknya di <strong>@dmxzaxe</strong>. Di akun tersebut, Akbar sering membagikan highlight permainannya, tips dan trik, serta konten menarik seputar Free Fire.</p>
+                </div>
+            </article>
+            
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Iklan DeepSeek -->
+                <div class="advertisement">
+                    <div class="ad-header">
+                        <span>IKLAN - AI TERBAIK</span>
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="ad-content">
+                        <div class="ad-deepseek">
+                            <h3><i class="fas fa-brain"></i> DeepSeek AI</h3>
+                            <p>Asisten AI canggih dengan kemampuan pemahaman konteks yang luar biasa. Gratis untuk digunakan!</p>
+                            <a href="https://www.deepseek.com" target="_blank" class="btn">Coba Sekarang</a>
+                        </div>
+                        
+                        <div class="ad-banner">
+                            <i class="fas fa-ad"></i>
+                            <p>Ruang Iklan 300x250</p>
+                            <small>Tempatkan iklan Anda di sini</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Iklan Lainnya -->
+                <div class="advertisement">
+                    <div class="ad-header">
+                        <span>SPONSOR</span>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="ad-content">
+                        <div class="ad-banner" style="height: 300px;">
+                            <i class="fas fa-gamepad"></i>
+                            <p>IKLAN GAMING</p>
+                            <small>Diskon 50% untuk semua item Free Fire</small>
+                        </div>
+                    <
